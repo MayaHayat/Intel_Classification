@@ -1,20 +1,13 @@
-Scene classification has emerged as a crucial technology with broad applications across
-various domains. From enabling autonomous vehicles to navigate diverse environments to
-organizing our digital memories based on their content, scene classification offers a powerful
-tool for unlocking the meaning and context within images.
-This project aims to classify images into six categories, the data is found on Kaggle, at
-https://www.kaggle.com/datasets/puneet6060/intel-image-classification.
-The problem was originally approached using the well known softmax regression for
-multi-classes. This model trains a separate linear model for each class. Each model has its
-own weight vector and bias, and the linear outputs are passed through the softmax function
-to obtain probabilities for each class. The softmax function normalizes the outputs to ensure
-they sum to 1 and represent valid probabilities.
-Next, we introduced a more complex and suitable model named CNN, the model offers a
-greater range of abilities, especially in its capacity to capture complex spatial and contextual
-features within the images. This allows it to differentiate between subtle details and patterns
-that might be missed by simpler models.
-The initial CNN model was improved using the VGG pretrained model which indeed resulted
-in the highest accuracy.
-This project explores the importance of data cleaning and transfer learning for the scene
-classification problem. It compares different models and highlights the benefits of utilizing
-pre-trained models to achieve better results.
+This project explores classifying natural scene images using logistic regression and convolutional neural networks (CNNs). We compare the performance of these two approaches on a dataset of 14,034 RGB images (150x150x3) categorized as buildings, forests, glaciers, mountains, seas, and streets.
+
+# Abstract
+
+Our focus is on demonstrating the power of CNNs for image classification. We built and analyzed a CNN model, compared its performance to a logistic regression model, and discussed potential areas for improvement. The CNN model achieved a significantly higher accuracy (88.2%) compared to logistic regression (46%). We delved into the code, analyzed the model's components, and explored both its achieved performance and potential areas for future development.
+
+# Introduction
+
+Scene classification plays a vital role in various domains, from enabling self-driving cars to organizing digital memories. This project aims to classify images into six categories using data from Kaggle's Intel Image Classification dataset (https://www.kaggle.com/datasets/puneet6060/intel-image-classification).
+
+We initially approached the problem using softmax regression, a common method for multi-class classification. This method trains a separate linear model for each class. We then introduced a more complex and suitable model called CNN. CNNs offer a wider range of capabilities, particularly in capturing spatial and contextual features within images. This allows them to differentiate between subtle details that simpler models might miss.
+
+The initial CNN model was further improved using the pre-trained VGG model, achieving the highest accuracy. This project emphasizes the importance of data cleaning and transfer learning for scene classification. It compares different models and highlights the benefits of utilizing pre-trained models to achieve better results.
